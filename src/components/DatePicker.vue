@@ -708,11 +708,7 @@ export default {
       return datesAreEqual(a, b);
     },
     valueIsDisabled(value) {
-      return (
-        this.hasValue(value) &&
-        this.disabledAttribute &&
-        this.disabledAttribute.intersectsDate(value)
-      );
+      return this.hasValue(value) && this.disabledAttribute;
     },
     formatInput() {
       this.$nextTick(() => {
