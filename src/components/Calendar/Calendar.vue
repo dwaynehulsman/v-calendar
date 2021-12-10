@@ -609,8 +609,7 @@ export default {
     },
     refreshDisabledDays(pages) {
       this.getPageDays(pages).forEach(d => {
-        d.isDisabled =
-          !!this.disabledAttribute && this.disabledAttribute.intersectsDay(d);
+        d.isDisabled = !!this.disabledAttribute;
       });
     },
     refreshFocusableDays(pages) {
